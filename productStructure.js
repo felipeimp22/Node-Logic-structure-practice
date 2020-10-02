@@ -12,13 +12,10 @@ const products = [
   "azul-XG", 
   "azul-P"
 ]
-
 module.exports = () => {
-
 
  var structure =[]
   products.forEach(e =>{structure.push(e.split('-'))})
-
  var preto = []
  var branco = []
  var vermelho = []
@@ -38,9 +35,6 @@ if(e[0] === "azul"){
 }
  
  })
-//  "preto":{
-//   "GG": products.map(e=>e === "GG") + ""
-// },
 
 /**
  * Preto
@@ -75,8 +69,6 @@ if(e === "P"){
   P_Preto++
 }
 })
-
-
 /**
  * Branco
  */
@@ -110,9 +102,6 @@ if(e === "P"){
  P_Branco++
 }
 })
-
-
-
 /**
  * Vermelho
  */
@@ -122,10 +111,7 @@ let P_Vermelho = 0
 let PP_Vermelho = 0
 let M_Vermelho = 0
 let XG_Vermelho = 0
-
 vermelho.map(e =>{
-
-  
   if(e === "GG"){
   GG_Vermelho++
 }
@@ -148,8 +134,6 @@ if(e === "P"){
  P_Vermelho++
 }
 })
-
-
 
 /**
  * Azul
@@ -185,53 +169,30 @@ if(e === "P"){
 })
 
 
-
-
 return  {
   "preto": {
     "PP":PP_Preto,
     "M":M_Preto,
   "G":G_Preto,
-
-// "XG":XG_Preto,
 "GG":GG_Preto,
-
-// "P": P_Preto,
-
   },
   "branco": {
 "PP":PP_Branco,
-
-    // "XG":XG_Branco,
-// "GG":GG_Branco,
 "G":G_Branco,
-// "M":M_Branco,
-// "P": P_Branco
+
   },
   "vermelho": {  
-  // "PP":PP_Vermelho,
 
-  // "XG":XG_Vermelho,
-  // "GG":GG_Vermelho,
-  // "G":G_Vermelho,
   "M":M_Vermelho,
-  // "P": P_Vermelho
+
   },
 
   "azul": {  
     "XG":XG_Azul,
-    // "GG":GG_Azul,
-    // "G":G_Azul,
-    // "M":M_Azul,
+
     "P": P_Azul,
-    // "PP": PP_Azul 
-    }
 
-}
-
-
-
- 
+    }}
 }
 
 
